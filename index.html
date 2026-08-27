@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nordwind Cycles - Berlin bikes, shipped anywhere</title>
+  <meta name="description" content="Hand-built city and touring bikes from Berlin. We ship worldwide.">
+  <!-- deploy:6d173280236f -->
+
+  <!-- iubenda:snippet --><!-- /iubenda:snippet -->
+
+  <!-- Google Analytics. The shop had this before it had a consent banner, which is the
+       point: the first scan has to find something real to complain about. The id is a
+       placeholder - the script loads and sets its cookies, nothing is reported anywhere. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRDWND0000"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRDWND0000');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#1b1f23; --paper:#f6f3ee; --accent:#c8552a; --muted:#6b6f74; --line:#e2ddd4; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family: Inter, system-ui, sans-serif; color:var(--ink); background:var(--paper); line-height:1.5; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 6vw; border-bottom:1px solid var(--line); background:#fff; }
+    .brand { font-family: Fraunces, Georgia, serif; font-weight:700; font-size:22px; letter-spacing:-.01em; }
+    .brand span { color:var(--accent); }
+    nav a { margin-left:28px; color:var(--ink); text-decoration:none; font-weight:500; font-size:15px; }
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap:48px; align-items:center; padding:64px 6vw; }
+    .hero h1 { font-family: Fraunces, Georgia, serif; font-size: clamp(36px, 5vw, 60px); line-height:1.05; font-weight:700; letter-spacing:-.02em; }
+    .hero p { margin-top:20px; font-size:18px; color:var(--muted); max-width:52ch; }
+    .cta { display:inline-block; margin-top:28px; background:var(--accent); color:#fff; padding:14px 22px; border-radius:6px; text-decoration:none; font-weight:500; }
+    .frame { aspect-ratio: 4/3; border-radius:12px; background:
+      radial-gradient(circle at 30% 60%, #e8b797 0 18%, transparent 19%),
+      radial-gradient(circle at 70% 60%, #e8b797 0 18%, transparent 19%),
+      linear-gradient(160deg, #23313b, #3d5a6c); position:relative; overflow:hidden; }
+    .frame::after { content:""; position:absolute; left:30%; right:30%; top:38%; height:4px; background:#f6f3ee; transform:rotate(-12deg); border-radius:2px; }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; padding:0 6vw 64px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px; }
+    .card h3 { font-family: Fraunces, Georgia, serif; font-size:20px; }
+    .card .price { color:var(--accent); font-weight:500; margin-top:6px; }
+    .card p { color:var(--muted); font-size:15px; margin-top:8px; }
+    .ship { padding:40px 6vw; background:#fff; border-top:1px solid var(--line); display:flex; gap:40px; flex-wrap:wrap; }
+    .ship div { flex:1 1 220px; }
+    .ship strong { display:block; font-size:15px; }
+    .ship small { color:var(--muted); }
+    .video { padding:0 6vw 64px; }
+    .video iframe { width:100%; aspect-ratio:16/9; border:0; border-radius:10px; }
+    footer { padding:28px 6vw; border-top:1px solid var(--line); color:var(--muted); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+    footer a { color:var(--muted); }
+    @media (max-width: 800px) { .hero, .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Nordwind <span>Cycles</span></div>
+    <nav><a href="#bikes">Bikes</a><a href="#shipping">Shipping</a><a href="#about">Workshop</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Built in Berlin.<br>Ridden everywhere.</h1>
+      <p>Steel city and touring frames, assembled by hand in our Kreuzberg workshop and shipped to your door - wherever that door is.</p>
+      <a class="cta" href="#bikes">Shop the bikes</a>
+    </div>
+    <div class="frame" role="img" aria-label="A Nordwind touring bike"></div>
+  </section>
+
+  <section class="grid" id="bikes">
+    <div class="card"><h3>Spree</h3><div class="price">EUR 1,290</div><p>An upright city bike with a belt drive and a rack that takes two crates of groceries.</p></div>
+    <div class="card"><h3>Havel</h3><div class="price">EUR 1,890</div><p>Our all-road tourer. Dynamo lights, 40mm tyres, and clearance for whatever the weather does.</p></div>
+    <div class="card"><h3>Oder</h3><div class="price">EUR 2,450</div><p>Long-distance steel with a low front end and mounts for everything you own.</p></div>
+  </section>
+
+  <section class="video">
+    <iframe src="https://www.youtube.com/embed/Ks-_Mh1QhMc" title="Inside the Nordwind workshop" loading="lazy" allowfullscreen></iframe>
+  </section>
+
+  <section class="ship" id="shipping">
+    <div><strong>Ships worldwide</strong><small>Boxed and insured. 3-5 days in the EU, 7-12 days elsewhere.</small></div>
+    <div><strong>Pay how you like</strong><small>Card, PayPal, SEPA transfer, or instalments.</small></div>
+    <div><strong>Two-year workshop warranty</strong><small>Frame and build. Bring it back, or post it back.</small></div>
+  </section>
+
+  <footer id="about">
+    <div>Nordwind Cycles GmbH - Reichenberger Str. 12, 10999 Berlin</div>
+    <div><a href="#">Privacy Policy</a> - <a href="#">Cookie Policy</a> - <a href="#">Terms</a></div>
+  </footer>
+</body>
+</html>
