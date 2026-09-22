@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nordwind Cycles - Berlin bikes, shipped anywhere</title>
   <meta name="description" content="Hand-built city and touring bikes from Berlin. We ship worldwide.">
-  <!-- deploy:8500730b95e7 -->
+  <!-- deploy:e6fba70f8f1c -->
 
+  <!-- the banner code goes here, read off the product's own embedding box -->
   <!-- iubenda:snippet -->
 <script type="text/javascript" src="https://embeds.iubenda.com/widgets/d2e5be19-06cf-4e7f-a71c-56bb1a8a0c2a.js"></script>
   <!-- /iubenda:snippet -->
@@ -92,7 +93,14 @@
 
   <footer id="about">
     <div>Nordwind Cycles GmbH - Reichenberger Str. 12, 10999 Berlin</div>
-    <div><a href="#">Privacy Policy</a> - <a href="#">Cookie Policy</a> - <a href="#">Terms</a></div>
+    <!-- The footer a real shop has: a Privacy Policy link that goes nowhere. That dead
+         link is the "before" programme 03 opens on, and it is the DEFAULT of the policy
+         slot - the video replaces it with the link iubenda gives you, and a reset puts
+         it back. -->
+    <div><!-- iubenda:policy -->
+<a href="https://www.iubenda.com/privacy-policy/00000000" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy">Privacy Policy</a>
+<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+  <!-- /iubenda:policy --> - <a href="#">Cookie Policy</a> - <a href="#">Terms</a></div>
   </footer>
 </body>
 </html>
