@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nordwind Cycles - Berlin bikes, shipped anywhere</title>
   <meta name="description" content="Hand-built city and touring bikes from Berlin. We ship worldwide.">
-  <!-- deploy:26ae66e87dd9 -->
+  <!-- deploy:d7cd5b6ead66 -->
 
   <!-- the banner code goes here, read off the product's own embedding box -->
   <!-- iubenda:snippet -->
@@ -14,9 +14,7 @@
 
   <!-- the Consent Database code goes here (programme 06), read off the product's own
        "Implement Consent Database > Javascript" box; empty means forms record nothing -->
-  <!-- iubenda:consent -->
-<script type="text/javascript">var _iub = _iub || {}; _iub.cons_instructions = _iub.cons_instructions || []; _iub.cons_instructions.push(["init", {api_key: "kUhKbQQBTKJSurHqk2ys1OJI6aHuZM3x"}]);</script><script type="text/javascript" src="https://cdn.iubenda.com/cons/iubenda_cons.js" async></script>
-  <!-- /iubenda:consent -->
+  <!-- iubenda:consent --><!-- /iubenda:consent -->
 
   <!-- Google Analytics. The shop had this before it had a consent banner, which is the
        point: the first scan has to find something real to complain about. The id is a
@@ -112,7 +110,7 @@
   <section class="news" id="newsletter">
     <h2>Ride with us</h2>
     <p>New bikes, workshop days and the odd long ride. One email a month.</p>
-    <form id="newsletter-form" onsubmit="return false">
+    <form id="newsletter-form" action="#newsletter">
       <input type="text" name="first_name" id="nl-first-name" placeholder="First name" autocomplete="off">
       <input type="email" name="email" id="nl-email" placeholder="Email" autocomplete="off">
       <label class="news__consent"><input type="checkbox" name="newsletter" id="nl-newsletter" value="1">
@@ -131,9 +129,13 @@
       },
       consent: { legal_notices: [{ identifier: "privacy_policy" }, { identifier: "cookie_policy" }] }
     }]);
-    document.getElementById("newsletter-submit").addEventListener("click", function () {
-      setTimeout(function () { document.getElementById("nl-thanks").hidden = false; }, 400);
-    });
+    /* iubenda's script sends the consent, then submits the form itself (form.submit(),
+       which skips onsubmit), so the page comes back with the sign-up in its address:
+       that is when to say thanks. Found 2026-10-19, programme 06. */
+    if (/[?&]email=/.test(location.search)) {
+      document.getElementById("nl-thanks").hidden = false;
+      document.getElementById("newsletter").scrollIntoView();
+    }
   </script>
 
   <footer id="about">
