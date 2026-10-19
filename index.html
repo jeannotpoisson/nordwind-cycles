@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nordwind Cycles - Berlin bikes, shipped anywhere</title>
   <meta name="description" content="Hand-built city and touring bikes from Berlin. We ship worldwide.">
-  <!-- deploy:6d6fb2bf8131 -->
+  <!-- deploy:d7c6fddb2460 -->
 
   <!-- the banner code goes here, read off the product's own embedding box -->
   <!-- iubenda:snippet -->
@@ -66,6 +66,8 @@
     .news__thanks { color:var(--ink) !important; font-weight:500; }
     footer { padding:28px 6vw; border-top:1px solid var(--line); color:var(--muted); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
     footer a { color:var(--muted); }
+    /* the whistleblowing link (programme 07) joins the row only when it is installed */
+    footer .wb:not(:empty)::before { content:" - "; }
     @media (max-width: 800px) { .hero, .grid { grid-template-columns:1fr; } }
   </style>
 </head>
@@ -163,7 +165,7 @@
          it back. -->
     <div><!-- iubenda:policy -->
 <a href="https://www.iubenda.com/privacy-policy/71612133" class="iubenda-white iubenda-noiframe iubenda-embed" title="Privacy Policy ">Privacy Policy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-  <!-- /iubenda:policy --> - <a href="#">Cookie Policy</a> - <a href="#">Terms</a></div>
+  <!-- /iubenda:policy --> - <a href="#">Cookie Policy</a> - <a href="#">Terms</a><span class="wb"><!-- iubenda:whistleblowing --><!-- /iubenda:whistleblowing --></span></div>
   </footer>
 </body>
 </html>
