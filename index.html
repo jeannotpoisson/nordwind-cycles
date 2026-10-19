@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nordwind Cycles - Berlin bikes, shipped anywhere</title>
   <meta name="description" content="Hand-built city and touring bikes from Berlin. We ship worldwide.">
-  <!-- deploy:26ae66e87dd9 -->
+  <!-- deploy:d7cd5b6ead66 -->
 
   <!-- the banner code goes here, read off the product's own embedding box -->
   <!-- iubenda:snippet -->
@@ -14,9 +14,7 @@
 
   <!-- the Consent Database code goes here (programme 06), read off the product's own
        "Implement Consent Database > Javascript" box; empty means forms record nothing -->
-  <!-- iubenda:consent -->
-<script type="text/javascript">var _iub = _iub || {}; _iub.cons_instructions = _iub.cons_instructions || []; _iub.cons_instructions.push(["init", {api_key: "kUhKbQQBTKJSurHqk2ys1OJI6aHuZM3x"}]);</script><script type="text/javascript" src="https://cdn.iubenda.com/cons/iubenda_cons.js" async></script>
-  <!-- /iubenda:consent -->
+  <!-- iubenda:consent --><!-- /iubenda:consent -->
 
   <!-- Google Analytics. The shop had this before it had a consent banner, which is the
        point: the first scan has to find something real to complain about. The id is a
@@ -43,11 +41,10 @@
     .hero h1 { font-family: Fraunces, Georgia, serif; font-size: clamp(36px, 5vw, 60px); line-height:1.05; font-weight:700; letter-spacing:-.02em; }
     .hero p { margin-top:20px; font-size:18px; color:var(--muted); max-width:52ch; }
     .cta { display:inline-block; margin-top:28px; background:var(--accent); color:#fff; padding:14px 22px; border-radius:6px; text-decoration:none; font-weight:500; }
-    .frame { aspect-ratio: 4/3; border-radius:12px; background:
-      radial-gradient(circle at 30% 60%, #e8b797 0 18%, transparent 19%),
-      radial-gradient(circle at 70% 60%, #e8b797 0 18%, transparent 19%),
-      linear-gradient(160deg, #23313b, #3d5a6c); position:relative; overflow:hidden; }
-    .frame::after { content:""; position:absolute; left:30%; right:30%; top:38%; height:4px; background:#f6f3ee; transform:rotate(-12deg); border-radius:2px; }
+    /* the hero bike: drawn, not a photo, so the shop has no image to break or license.
+       Until 2026-10-19 it was two gradient discs and a tilted bar, which read as broken. */
+    .frame { aspect-ratio: 4/3; border-radius:12px; background: linear-gradient(160deg, #23313b, #3d5a6c); overflow:hidden; display:grid; place-items:center; }
+    .frame svg { width:86%; height:auto; }
     .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:24px; padding:0 6vw 64px; }
     .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:22px; }
     .card h3 { font-family: Fraunces, Georgia, serif; font-size:20px; }
@@ -84,7 +81,25 @@
       <p>Steel city and touring frames, assembled by hand in our Kreuzberg workshop and shipped to your door - wherever that door is.</p>
       <a class="cta" href="#bikes">Shop the bikes</a>
     </div>
-    <div class="frame" role="img" aria-label="A Nordwind touring bike"></div>
+    <div class="frame" role="img" aria-label="A Nordwind touring bike">
+      <svg viewBox="0 0 400 260" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <g stroke="#e8b797" stroke-width="9"><circle cx="95" cy="180" r="62"/><circle cx="305" cy="180" r="62"/></g>
+        <g stroke="#e8b797" stroke-width="2" opacity=".55">
+          <path d="M95 118v124M33 180h124M51 136l88 88M51 224l88-88"/>
+          <path d="M305 118v124M243 180h124M261 136l88 88M261 224l88-88"/>
+        </g>
+        <g stroke="#f6f3ee" stroke-width="8">
+          <path d="M95 180 L190 180 L160 92 Z"/>
+          <path d="M160 92 L268 92 L190 180"/>
+          <path d="M262 74 L305 180"/>
+          <path d="M160 92 L152 70"/>
+          <path d="M262 74 L256 56 Q275 50 290 60"/>
+        </g>
+        <path d="M134 66 h38" stroke="#f6f3ee" stroke-width="10"/>
+        <circle cx="190" cy="180" r="13" stroke="#f6f3ee" stroke-width="6"/>
+        <g fill="#f6f3ee"><circle cx="95" cy="180" r="7"/><circle cx="305" cy="180" r="7"/></g>
+      </svg>
+    </div>
   </section>
 
   <section class="grid" id="bikes">
